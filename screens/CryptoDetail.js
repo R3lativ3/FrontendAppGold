@@ -1,21 +1,27 @@
 import React from 'react';
 import {
     StyleSheet,
+    SafeAreaView,
     View,
     Text,
-    TouchableOpacity
+    TouchableOpacity,
+    Image,
+    ScrollView,
+    Animated
 } from 'react-native';
+
+import { dummyData, COLORS, SIZES, FONTS, icons } from '../constants';
 
 const CryptoDetail = ({ navigation }) => {
     return (
-        <View style={styles.container}>
-            <Text>CryptoDetail</Text>
-            <TouchableOpacity
-                onPress={() => navigation.navigate("Transaction")}
-            >
-                <Text>Navigate to Transaction</Text>
-            </TouchableOpacity>
-        </View>
+        <SafeAreaView
+            style={{
+                flex: 1,
+                backgroundColor: COLORS.lightGray
+            }}
+        >
+
+        </SafeAreaView>
     )
 }
 

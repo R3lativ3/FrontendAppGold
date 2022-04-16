@@ -6,10 +6,10 @@ export const portfolio = {
 export const trendingCurrencies = [
     {
         id: 1,
-        currency: "Bitcoin",
-        code: "BTC",
+        currency: "Actual",
+        code: "01/03 - 07/03",
         image: require("../assets/images/bitcoin.png"),
-        amount: "29,455.74",
+        amount: "Q. 10,450",
         changes: "+7.24%",
         type: "I",      // I - Increased, D - Decreased
         description: "Bitcoin is a cryptocurrency invented in 2008 by an unknown person or group of people using the name Satoshi Nakamoto. The currency began use in 2009 when its implementation was released as open-source software.",
@@ -104,11 +104,11 @@ export const trendingCurrencies = [
     },
     {
         id: 2,
-        currency: "Ethereum",
-        code: "ETH",
+        currency: "Anterior",
+        code: "08/03 - 15/03",
         image: require("../assets/images/ethereum.png"),
         amount: "919.03",
-        changes: "-0.73%",
+        changes: "Q. 8,950",
         type: "D",
         description: "Ethereum is a decentralized, open-source blockchain featuring smart contract functionality. Ether is the native cryptocurrency of the platform. It is the second-largest cryptocurrency by market capitalization, after Bitcoin. Ethereum is the most actively used blockchain.",
         chartData: [
@@ -399,76 +399,51 @@ export const trendingCurrencies = [
 export const transactionHistory = [
     {
         id: 1,
-        description: "Sold Ethereum",
+        description: "Buda Carioca",
         amount: -2.0034,
         currency: "ETH",
         type: "S",      // S - Sold, B - Bought
-        date: "14:20 12 Apr"
+        date: "Q50,00 11 AM"
     },
     {
         id: 2,
-        description: "Bought Ethereum",
-        amount: 2.0034,
+        description: "Marlon Bedoya",
+        amount: -2.0034,
         currency: "ETH",
-        type: "B",
-        date: "14:20 12 Apr"
+        type: "B",      // S - Sold, B - Bought
+        date: "Credito entregado: Q500,00 10 AM"
     },
     {
         id: 3,
-        description: "Sold Ethereum",
+        description: "Buda Extraño",
         amount: -2.0034,
         currency: "ETH",
-        type: "S",
-        date: "14:20 12 Apr"
+        type: "B",      // S - Sold, B - Bought
+        date: "Q40,00 9:50 AM"
     },
     {
         id: 4,
-        description: "Bought Ethereum",
-        amount: 2.0034,
+        description: "Diablo Fernando",
+        amount: -2.0034,
         currency: "ETH",
-        type: "B",
-        date: "14:20 12 Apr"
+        type: "B",      // S - Sold, B - Bought
+        date: "Credito entregado: Q1500,00 9:40 AM"
     },
     {
         id: 5,
-        description: "Bought Ethereum",
-        amount: 2.0034,
+        description: "Buda Carioca",
+        amount: -2.0034,
         currency: "ETH",
-        type: "B",
-        date: "14:20 12 Apr"
+        type: "S",      // S - Sold, B - Bought
+        date: "Q50,00 11 AM"
     },
-
     {
         id: 6,
-        description: "Bought Ethereum",
-        amount: 2.0034,
+        description: "Buda Carioca",
+        amount: -2.0034,
         currency: "ETH",
-        type: "B",
-        date: "14:20 12 Apr"
-    },
-    {
-        id: 7,
-        description: "Bought Ethereum",
-        amount: 2.0034,
-        currency: "ETH",
-        type: "B",
-        date: "14:20 12 Apr"
-    },
-    {
-        id: 8,
-        description: "Bought Ethereum",
-        amount: 2.0034,
-        currency: "ETH",
-        type: "B",
-        date: "14:20 12 Apr"
-    },
-    {
-        id: 9,
-        description: "Bought Ethereum",
-        amount: 2.0034,
-        currency: "ETH",
-        type: "B",
-        date: "14:20 12 Apr"
+        type: "S",      // S - Sold, B - Bought
+        date: "Q50,00 11 AM"
     },
 ];
 

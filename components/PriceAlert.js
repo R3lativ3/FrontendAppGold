@@ -29,8 +29,8 @@ const PriceAlert = ({ customContainerStyle }) => {
             />
 
             <View style={{ flex: 1, marginLeft: SIZES.radius }}>
-                <Text style={{ ...FONTS.h3 }}>Set Price Alert</Text>
-                <Text style={{ ...FONTS.body4 }}>Get notified when yours coins are moving</Text>
+                <Text style={{ ...FONTS.h3 }}>Finalizar Ruta</Text>
+                <Text style={{ ...FONTS.body4 }}>Notifica cuando hayas finalizado tu ruta</Text>
             </View>
 
             <Image 

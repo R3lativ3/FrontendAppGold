@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {
     StyleSheet,
     View,
@@ -7,16 +7,22 @@ import {
     FlatList,
     TouchableOpacity,
     Image,
-    ImageBackground
+    ImageBackground,
+    LogBox
 } from 'react-native';
 
 import { dummyData, COLORS, SIZES, FONTS, icons, images } from '../constants';
 
-import { PriceAlert } from "../components"
+import { PriceAlert, TransactionHistory } from "../components"
 
 const Home = ({ navigation }) => {
 
-    const [trending, setTrending] = React.useState(dummyData.trendingCurrencies)
+    const [trending, setTrending] = useState(dummyData.trendingCurrencies)
+    const [transactionHistory, setTransactionHistory] = useState(dummyData.transactionHistory)
+
+    useEffect(() => {
+        LogBox.ignoreLogs(['VirtualizedLists should never be nested'])
+    })
 
     function renderHeader(){
         
@@ -31,11 +37,13 @@ const Home = ({ navigation }) => {
                     borderRadius: 10,
                     backgroundColor: COLORS.white
                 }}
+                onPress={
+                    () => navigation.navigate('CryptoDetail', {currency: item}
+                )}
             >
                 <View style={{ flexDirection: 'row' }}>
                     <View>
                         <Image 
-                            source={item.image}
                             resizeMode="cover"
                             style={{
                                 marginTop: 5, 
@@ -67,7 +75,7 @@ const Home = ({ navigation }) => {
                 }}
             >
                 <ImageBackground
-                    source={images.banner}
+                    source={images.img1}
                     resizeMode="cover"
                     style={{
                         flex: 1,
@@ -109,9 +117,9 @@ const Home = ({ navigation }) => {
                             justifyContent: 'center'
                         }}
                     >
-                        <Text style={{ color: COLORS.white, ...FONTS.h3}}> your portfolio balance </Text>
-                        <Text style={{ marginTop: SIZES.base, color: COLORS.white, ...FONTS.h1 }}>${dummyData.portfolio.balance}</Text>
-                        <Text style={{ color: COLORS.white, ...FONTS.body5}}>{dummyData.portfolio.changes} Last 24 Hours</Text>
+                        <Text style={{ color: COLORS.white, ...FONTS.h3}}> Tu Cobro Semanal </Text>
+                        <Text style={{ marginTop: SIZES.base, color: COLORS.white, ...FONTS.h1 }}>Q 5,450.00</Text>
+                        <Text style={{ color: COLORS.white, ...FONTS.body5}}>{dummyData.portfolio.changes} Ultimos 4 Dias</Text>
                     </View>
 
                     {/* Trending */}
@@ -121,7 +129,7 @@ const Home = ({ navigation }) => {
                             bottom: "-30%"
                         }}
                     >
-                        <Text style={{ marginLeft: SIZES.padding, color: COLORS.white, ...FONTS.h2 }}>Trending</Text>
+                        <Text style={{ marginLeft: SIZES.padding, color: COLORS.white, ...FONTS.h2 }}>Semana</Text>
                         <FlatList
                             contentContainerStyle={{ marginTop: SIZES.base }}
                             data={trending}
@@ -157,11 +165,9 @@ const Home = ({ navigation }) => {
                     ...styles.shadow
                 }}
             >
-                <Text style={{ color: COLORS.white, ...FONTS.h3}}>Investing Safety</Text>
+                <Text style={{ color: COLORS.white, ...FONTS.h3}}>Comparativa Mensual</Text>
                 <Text style={{ marginTop: SIZES.base, color: COLORS.white, ...FONTS.body4, lineHeight: 18}}>
-
-                askas asl k slak slk a sk  asldkaslkdmaskdm aksdasklm asklmdalksmkdkmalmk lk lkslkLKSMALK LKASMKLDMSKLMDLAKSMLKM
-
+                    Ver comparativa de progreso entre otros meses para mejorar cartera
                 </Text>
 
                 <TouchableOpacity
@@ -170,9 +176,18 @@ const Home = ({ navigation }) => {
                     }}
                     onPress={() => console.log('read more')}
                 >
-                    <Text style={{ textDecorationLine: 'underline', color: COLORS.green, ...FONTS.h3 }}> Learn More</Text>
+                    <Text style={{ textDecorationLine: 'underline', color: COLORS.green, ...FONTS.h3 }}> Ver Mas</Text>
                 </TouchableOpacity>
             </View>
+        )
+    }
+
+    function renderTransactionHistory(){
+        return (
+            <TransactionHistory 
+                customContainerStyle={{ ...styles.shadow }}
+                history={transactionHistory}
+            />
         )
     }
 
@@ -182,6 +197,7 @@ const Home = ({ navigation }) => {
                 {renderHeader()}
                 {renderAlert()}
                 {renderNotice()}
+                {renderTransactionHistory()}
             </View>
         </ScrollView>
     )
