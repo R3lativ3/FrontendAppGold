@@ -14,7 +14,7 @@ const HeaderBar = ({ right }) => {
 
     return (
         <View style={{ paddingHorizontal: SIZES.padding, flexDirection: 'row'}}>
-            <View style={{ flex: 1, alignItems: 'flex-start'}}>
+            <View style={{ flex:1, alignItems: 'flex-start'}}>
                 <TouchableOpacity
                     style={{
                         flexDirection: 'row',
@@ -37,7 +37,12 @@ const HeaderBar = ({ right }) => {
             <View style={{ flex: 1, alignItems: 'flex-end'}}>
                 <TouchableOpacity>
                     <Image 
-                    
+                        source={icons.star}
+                        resizeMode="contain"
+                        style={{
+                            width: 30,
+                            height: 30
+                        }}
                     />
                 </TouchableOpacity>
             </View>

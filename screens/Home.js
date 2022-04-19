@@ -13,7 +13,7 @@ import {
 
 import { dummyData, COLORS, SIZES, FONTS, icons, images } from '../constants';
 
-import { PriceAlert, TransactionHistory } from "../components"
+import { PriceAlert, TransactionHistory, HeaderBar } from "../components"
 
 const Home = ({ navigation }) => {
 
@@ -23,7 +23,7 @@ const Home = ({ navigation }) => {
     useEffect(() => {
         LogBox.ignoreLogs(['VirtualizedLists should never be nested'])
     })
-
+// 
     function renderHeader(){
         
         const renderItem = ({ item, index }) => (
