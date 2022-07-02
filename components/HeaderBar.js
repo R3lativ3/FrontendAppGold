@@ -37,7 +37,7 @@ const HeaderBar = ({ right }) => {
             <View style={{ flex: 1, alignItems: 'flex-end'}}>
                 <TouchableOpacity>
                     <Image 
-                        source={icons.star}
+                        source={icons.transaction}
                         resizeMode="contain"
                         style={{
                             width: 30,

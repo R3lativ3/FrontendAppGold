@@ -10,9 +10,8 @@ import {
     ImageBackground,
     LogBox
 } from 'react-native';
-
+import { Box } from "native-base"
 import { dummyData, COLORS, SIZES, FONTS, icons, images } from '../constants';
-
 import { PriceAlert, TransactionHistory, HeaderBar } from "../components"
 
 const Home = ({ navigation }) => {
@@ -56,6 +55,7 @@ const Home = ({ navigation }) => {
                         <Text style={{ ...FONTS.h2 }}>{item.currency}</Text>
                         <Text style={{ color: COLORS.gray, ...FONTS.body3 }}>{item.code}</Text>
                     </View>
+                    <Box>Hello world</Box>
                 </View>
 
                 <View style={{ marginTop: SIZES.radius }}>

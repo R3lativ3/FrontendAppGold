@@ -7,7 +7,7 @@ import {
     StyleSheet
 } from "react-native";
 import { createBottomTabNavigator, BottomTabBar } from "@react-navigation/bottom-tabs"
-import { Home, CryptoDetail } from "../screens"
+import { Home, CryptoDetail, Cobros } from "../screens"
 import { COLORS, FONTS, icons } from "../constants"
 import { LinearGradient } from "expo-linear-gradient";
 
@@ -90,7 +90,7 @@ const Tabs = () => {
             />
             <Tab.Screen
                 name="Transaction"
-                component={Home}
+                component={Cobros}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <Image
