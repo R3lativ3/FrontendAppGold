@@ -6,8 +6,8 @@ import {
 } from 'react-native';
 import { Box, FlatList, Heading, Avatar, HStack, VStack, Text, Spacer, Center, NativeBaseProvider } from "native-base";
 
-import { HeaderBar } from '../components';
-import { COLORS, SIZES } from '../constants';
+import { HeaderBar } from '../../components';
+import { COLORS, SIZES } from '../../constants';
 
 
 const Cobros = () => {

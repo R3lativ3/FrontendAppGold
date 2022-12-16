@@ -42,25 +42,17 @@ const Home = ({ navigation }) => {
             >
                 <View style={{ flexDirection: 'row' }}>
                     <View>
-                        <Image 
-                            resizeMode="cover"
-                            style={{
-                                marginTop: 5, 
-                                width: 25, 
-                                height: 25
-                            }}
-                        />
+                        
                     </View>
                     <View style={{ marginLeft: SIZES.base }}>
                         <Text style={{ ...FONTS.h2 }}>{item.currency}</Text>
-                        <Text style={{ color: COLORS.gray, ...FONTS.body3 }}>{item.code}</Text>
+                        <Text style={{ color: COLORS.gray, ...FONTS.body4 }}>{item.code}</Text>
                     </View>
-                    <Box>Hello world</Box>
                 </View>
 
                 <View style={{ marginTop: SIZES.radius }}>
-                    <Text style={{ ...FONTS.h2 }}>${item.amount}</Text>
-                    <Text style={{ color: item.type == "I" ? COLORS.green : COLORS.red, ...FONTS.h3 }}>{item.changes}</Text>
+                    <Text style={{ ...FONTS.h3 }}>${item.amount}</Text>
+                    <Text style={{ color: item.type == "I" ? COLORS.green : COLORS.red, ...FONTS.h4 }}>{item.changes}</Text>
 
                 </View>
             </TouchableOpacity>
@@ -129,7 +121,6 @@ const Home = ({ navigation }) => {
                             bottom: "-30%"
                         }}
                     >
-                        <Text style={{ marginLeft: SIZES.padding, color: COLORS.white, ...FONTS.h2 }}>Semana</Text>
                         <FlatList
                             contentContainerStyle={{ marginTop: SIZES.base }}
                             data={trending}

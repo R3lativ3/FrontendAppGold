@@ -4,6 +4,9 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from '@react-navigation/native';
 import { NativeBaseProvider } from 'native-base'
 import Tabs from "./navigation/tabs";
+import Cobro from './screens/Cobro/Cobro';
+import AddCobro from './screens/Cobro/AddCobro';
+import EditCobro from './screens/Cobro/EditCobro';
 
 const Stack = createStackNavigator();
 
@@ -16,7 +19,7 @@ const App = () => {
             headerShown: false
           }}
           
-          initialRouteName={'Home'}
+          initialRouteName={'Regresar'}
         >
           <Stack.Screen
             name="Home"
@@ -30,6 +33,16 @@ const App = () => {
           <Stack.Screen
             name="Transaction"
             component={Transaction}
+          />
+          <Stack.Screen
+            name="AddCobro"
+            options={{ title: 'Agregar Cobro', headerBackTitle:'Cobros',  headerShown: true }}
+            component={AddCobro}
+          />
+          <Stack.Screen
+            name="EditCobro"
+            options={{ title: 'Editar Cobro', headerBackTitle:'Cobros',  headerShown: true }}
+            component={EditCobro}
           />
         </Stack.Navigator>
       </NavigationContainer>

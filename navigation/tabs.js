@@ -10,6 +10,7 @@ import { createBottomTabNavigator, BottomTabBar } from "@react-navigation/bottom
 import { Home, CryptoDetail, Cobros } from "../screens"
 import { COLORS, FONTS, icons } from "../constants"
 import { LinearGradient } from "expo-linear-gradient";
+import Cobro from "../screens/Cobro/Cobro";
 
 const Tab = createBottomTabNavigator()
 
@@ -90,7 +91,7 @@ const Tabs = () => {
             />
             <Tab.Screen
                 name="Transaction"
-                component={Cobros}
+                component={Cobro}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <Image

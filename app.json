@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "AppCorpGold",
-    "slug": "AppCorpGold",
+    "slug": "goldapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -23,10 +23,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.gold.app"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "adf1d45e-90c5-498b-bf0a-43d73eb7d34f"
+      }
+    },
+    "owner": "r3lativ3"
   }
 }
